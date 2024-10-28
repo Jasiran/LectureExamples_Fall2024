@@ -1,0 +1,13 @@
+def weird_log(x: float) -> float:
+    result = 0.0
+    for n in range(50):
+        term = (x ** (2 * n + 1)) / (2 * n + 1)
+        result += term
+    return 2 * result
+
+# Sample test cases
+if __name__ == "__main__":
+    print(f'{weird_log(0.0) = }')  # expected output: weird_log(0.0) = 0.0
+    print(f'{weird_log(0.5) = }')  # expected output: weird_log(0.5) = 1.098612288668109
+    print(f'{weird_log(-0.5) = }') # expected output: weird_log(-0.5) = -1.098612288668109
+    print(f'{weird_log(1.0) = }')  # expected output: weird_log(1.0) = 5.875549696949814
